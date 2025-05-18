@@ -9,8 +9,8 @@ const Header: React.FC = () => {
           <h1 className="text-2xl font-bold text-pink-800">Portfolio</h1>
           <div className="hidden md:flex space-x-8">
             <a href="#projects" className="text-pink-800 hover:text-pink-600 transition-colors">Projects</a>
-            <a href="#process" className="text-pink-800 hover:text-pink-600 transition-colors">Process</a>
-            <a href="#contact" className="text-pink-800 hover:text-pink-600 transition-colors">Contact</a>
+            {<a href="#process" className="text-pink-800 hover:text-pink-600 transition-colors">Process</a>}
+            {<a href="#contact" className="text-pink-800 hover:text-pink-600 transition-colors">Contact</a>}
           </div>
         </nav>
         
