@@ -41,45 +41,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-pink-100 mb-2">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full p-3 rounded-lg bg-pink-700 border border-pink-600 text-white placeholder-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-pink-100 mb-2">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full p-3 rounded-lg bg-pink-700 border border-pink-600 text-white placeholder-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  placeholder="Your email"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-pink-100 mb-2">Message</label>
-                <textarea 
-                  id="message" 
-                  rows={5}
-                  className="w-full p-3 rounded-lg bg-pink-700 border border-pink-600 text-white placeholder-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  placeholder="Tell me about your project"
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                className="px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-400 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>

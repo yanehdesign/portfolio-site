@@ -32,12 +32,6 @@ const Header: React.FC = () => {
               in unique and meaningful ways. My journey as a designer is all about growth, 
               discovery, and storytelling.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 bg-pink-300 text-pink-800 rounded-full text-sm font-medium">Typography</span>
-              <span className="px-4 py-2 bg-pink-300 text-pink-800 rounded-full text-sm font-medium">Branding</span>
-              <span className="px-4 py-2 bg-pink-300 text-pink-800 rounded-full text-sm font-medium">Digital Design</span>
-              <span className="px-4 py-2 bg-pink-300 text-pink-800 rounded-full text-sm font-medium">Print Design</span>
-            </div>
           </div>
         </div>
       </div>

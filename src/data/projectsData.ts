@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Packaging: Elegance Cosmetics",
+    title: "Ver",
     description: "Premium packaging design for a luxury cosmetics line, emphasizing sustainability and elegance.",
     imageUrl: "https://images.pexels.com/photos/5797999/pexels-photo-5797999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Packaging", "Sustainable", "Luxury"]

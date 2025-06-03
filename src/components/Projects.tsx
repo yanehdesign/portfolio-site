@@ -1,24 +1,38 @@
-import React from 'react';
-import { projects } from '../data/projectsData';
-import ProjectCard from './ProjectCard';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
-const Projects: React.FC = () => {
+export default function Contact() {
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-pink-800 mb-2">Projects</h2>
-        <p className="text-pink-700 mb-12 max-w-2xl">
-          Below is a portfolio selection highlighting a range of projects that demonstrate my skills and evolving style.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map(project => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 gradient-text">
+            Let's Create Together
+          </h2>
+          <p className="text-xl text-zinc-400 mb-12">
+            Ready to bring your vision to life? Get in touch and let's make something amazing.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a
+              href="mailto:hello@yaneh.design"
+              className="flex flex-col items-center p-6 rounded-2xl bg-zinc-900 hover:bg-zinc-800 transition"
+            >
+              <Mail className="w-8 h-8 text-primary mb-4" />
+              <span className="text-zinc-300">hello@yaneh.design</span>
+            </a>
+            <a
+              href="tel:+1234567890"
+              className="flex flex-col items-center p-6 rounded-2xl bg-zinc-900 hover:bg-zinc-800 transition"
+            >
+              <Phone className="w-8 h-8 text-primary mb-4" />
+              <span className="text-zinc-300">+1 (234) 567-890</span>
+            </a>
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-zinc-900 hover:bg-zinc-800 transition">
+              <MapPin className="w-8 h-8 text-primary mb-4" />
+              <span className="text-zinc-300">San Francisco, CA</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Projects;
+}
