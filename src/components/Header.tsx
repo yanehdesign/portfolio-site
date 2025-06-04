@@ -1,5 +1,4 @@
 import React from 'react';
-import { UserCircle } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
