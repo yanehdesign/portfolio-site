@@ -5,29 +5,29 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 bg-pink-800 text-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-2">Get in Touch</h2>
-        <p className="text-pink-100 mb-25 max-w-2xl">
-          Let's Create Together
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-pink-300" />
-                <span>yaneh@yanehdesign.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-pink-300" />
-                <span>+1 (307) 220-1192</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-pink-300" />
-                <span>Portland, Oregon</span>
-              </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-xl font-semibold mb-text-4xl md:text-5xl font-display font-bold mb-6 gradient-text">Contact</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a
+              href="mailto:hello@yaneh.design"
+              className="flex flex-col items-center p-6 rounded-2xl hover:bg-white/20 transition"
+            >
+              <Mail className="w-12 h-12 text-primary mb-4" />
+              <span className="text-white">yaneh@yanehdesign.com</span>
+            </a>
+            <a
+              href="tel:+1234567890"
+              className="flex flex-col items-center p-6 rounded-2xl hover:bg-white/20 transition"
+            >
+              <Phone className="w-12 h-12 text-primary mb-4" />
+              <span className="text-white">+1 (307) 220-1192</span>
+            </a>
+            <div className="flex flex-col items-center p-6 rounded-2xl hover:bg-white/20 transition">
+              <MapPin className="w-12 h-12 text-primary mb-4" />
+              <span className="text-white">Portland, OR</span>
+            </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
