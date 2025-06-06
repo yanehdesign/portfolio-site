@@ -8,9 +8,6 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 gradient-text">
             Let's Create Together
           </h2>
-          <p className="text-xl text-zinc-400 mb-12">
-            Ready to bring your vision to life? Get in touch and let's make something amazing.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a
               href="mailto:hello@yaneh.design"

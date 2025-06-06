@@ -7,9 +7,7 @@ const Header: React.FC = () => {
         <nav className="flex items-center justify-between">
           <h1 className="text-2xl font-display font-bold text-pink-800">yaneh.design</h1>
           <div className="hidden md:flex space-x-8">
-            {/* Temporarily comment out these links */}
-            {/* <a href="#projects" className="text-pink-800 hover:text-pink-600 transition-colors">Projects</a> */}
-            {/* <a href="#process" className="text-pink-800 hover:text-pink-600 transition-colors">Process</a> */}
+            {<a href="#projects" className="text-pink-800 hover:text-pink-600 transition-colors">Projects</a> }
             <a href="#contact" className="text-pink-800 hover:text-pink-600 transition-colors">Contact</a>
           </div>
         </nav>

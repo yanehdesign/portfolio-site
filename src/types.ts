@@ -3,7 +3,6 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  tags: string[];
 }
 
 export interface ProcessItem {
