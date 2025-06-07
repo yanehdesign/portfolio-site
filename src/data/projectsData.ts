@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Brand Identity: Puebla Process",
     description: "Puebla rebrand process.",
-    imageUrl: "/images/CalmCulturePuebla2.png",
+    imageUrl: "/images/CalmCulturePuebla.png",
     // Note: Adjust the image URL as needed, this is a placeholder
   },
   {
@@ -26,21 +26,21 @@ export const projects: Project[] = [
     id: 4,
     title: "Masć",
     description: "Design for vibrant and dynamic pieces that celebrate artistic freedom and expression.",
-    imageUrl: "images/postermasc.png",
+    imageUrl: "/images/postermasc.png",
     // Note: Adjust the image URL as needed, this is a placeholder
   },
   {
     id: 5,
     title: "Ver",
     description: "Ver is a movie event dedicated to showcasing films about Latino, inspired by my earlier work before pursuing graphic design.",
-    imageUrl: "images/verposters.png",
+    imageUrl: "/images/verposters.png",
     // Note: Adjust the image URL as needed, this is a placeholder
   },
   {
     id: 6,
     title: "Summit Coffee",
     description: "Summit Sip brand features playful, nature-inspired icons. ",
-    imageUrl: "images/summitcoffee.png",
+    imageUrl: "/images/summitcoffee.png",
     // Note: Adjust the image URL as needed, this is a placeholder
   },
 ];

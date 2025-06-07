@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import ProjectCard from './components/ProjectCard';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import { projects } from './data/projectsData';
 import ProjectDetail from './components/ProjectDetail';
 
@@ -27,7 +27,7 @@ function App() {
                       <ProjectCard
                         key={project.id}
                         project={project}
-                        onClick={() => window.location.href = `/project/${project.id}`}
+                        onClick={() => window.location.href = `#/project/${project.id}`}
                       />
                     ))}
                   </div>
