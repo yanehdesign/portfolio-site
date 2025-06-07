@@ -6,16 +6,16 @@ export default {
     extend: {
       colors: {
         pink: {
-          50: '#FFF0F5',
-          100: '#FDD6E3',
-          200: '#FBB6D0',
-          300: '#F897BE',
-          400: '#F371A3',
-          500: '#E84A77',
-          600: '#D02E5D',
-          700: '#B01F46',
-          800: '#911533',
-          900: '#730C26',
+          50:  '#ffc1cc', // lightest
+          100: '#f9b4b8',
+          200: '#eb9596',
+          300: '#ff6670',
+          400: '#d32c4f', // darkest
+          500: '#d32c4f', // repeat for mid/dark shades if you want
+          600: '#d32c4f',
+          700: '#d32c4f',
+          800: '#d32c4f',
+          900: '#d32c4f',
         },
       },
       fontFamily: {
