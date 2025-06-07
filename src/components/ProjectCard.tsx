@@ -27,6 +27,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       <div className={`absolute inset-0 bg-gradient-to-t from-pink-900 via-pink-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6`}>
         <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
         <p className="text-white/90 mb-4">{project.description}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Branding</span>
+          {/* ...other tags */}
+        </div>
       </div>
     </div>
   );

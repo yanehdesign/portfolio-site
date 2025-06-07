@@ -1,4 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { projects } from '../data/projectsData';
+import ProjectCard from './ProjectCard';
 
 export default function Contact() {
   return (
@@ -33,3 +35,13 @@ export default function Contact() {
     </section>
   );
 }
+
+<section id="projects" className="py-16">
+  <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    {projects.map((project) => (
+      <ProjectCard key={project.id} project={project} onClick={function (): void {
+        throw new Error('Function not implemented.');
+      } } />
+    ))}
+  </div>
+</section>;

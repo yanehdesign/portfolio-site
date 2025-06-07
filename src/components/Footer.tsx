@@ -4,19 +4,18 @@ export const Footer = () => {
       <div className="container mx-auto flex flex-col items-center justify-center">
         {/* Company Info */}
         <aside className="flex flex-col items-center mb-6">
-          <img
-            src="/images/personallogobw.svg"
-            alt="Yaneh Design Logo"
-            width={50}
-            height={50}
-            className="mb-2"
-          />
+          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow">
+            <span className="text-pink-800 font-bold text-xl font-sans">Y</span>
+          </div>
           <p className="font-bold text-center">
             Yaneh Design.<br />
             Providing bonito designs.
           </p>
           <p className="text-center">
             Copyright © {new Date().getFullYear()} - All rights reserved
+          </p>
+          <p className="font-sans text-pink-200 text-sm">
+            Made with 💖 and mucho flow
           </p>
         </aside>
 
