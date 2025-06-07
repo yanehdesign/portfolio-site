@@ -16,7 +16,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Brand Identity: Puebla Process",
     description: "Puebla rebrand process.",
-    imageUrl: "/images/CalmCulturePuebla.png",
+    imageUrl: "/images/pueblaresearch.png",
     // Note: Adjust the image URL as needed, this is a placeholder
   },
   {
