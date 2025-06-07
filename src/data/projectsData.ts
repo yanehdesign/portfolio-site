@@ -6,7 +6,11 @@ export const projects: Project[] = [
     title: "Brand Identity: Puebla",
     description: "The Puebla rebrand uses simplicity and photography to highlight the city’s serene beauty and rich traditions, creating a calming identity.",
     imageUrl: "/images/CalmCulturePuebla.png",
-    // Note: Adjust the image URL as needed, this is a placeholder
+    extraImages: [
+      "/images/brandcover.png",
+      "/images/brandstationary.png",
+      "/images/brandbag.png"
+    ], // Note: Adjust the image URL as needed, this is a placeholder
   },
   {
     id: 2,

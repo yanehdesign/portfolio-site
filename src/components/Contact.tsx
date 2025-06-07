@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-pink-800 text-white">
       <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-4xl md:text-5xl font-display font-bold mb-6">Contact</h3>
+            <h3 className="text-4xl md:text-5xl font-sans font-bold mb-6">Contact</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a
               href="mailto:yaneh@yanehdesign.com"

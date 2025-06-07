@@ -11,14 +11,14 @@ const ProjectDetail = () => {
   return (
     <div className="container mx-auto px-6 py-16">
       <button className="mb-4 text-pink-800" onClick={() => navigate(-1)}>&larr; Back</button>
-      <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+      <h1 className="text-4xl font-sans mb-4">{project.title}</h1>
       <img src={project.imageUrl} alt={project.title} className="mb-6 rounded" />
       <p className="mb-6">{project.description}</p>
       {/* Add more detailed info about Puebla here */}
       {project.id === 1 && (
         <div>
           <h2 className="text-2xl font-semibold mb-2">More About Puebla</h2>
-          <p>Put your extra information about Puebla here!</p>
+          <p>This minimalist approach emphasizes relaxing, comforting elements that showcase Puebla’s cultural heritage in an elegant and approachable way.</p>
         </div>
       )}
     </div>

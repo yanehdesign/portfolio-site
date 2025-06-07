@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -19,16 +20,16 @@ export default {
       },
       fontFamily: {
         sans: [
-          '"Inter"',
+          'Tahoma',
           'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          'sans-serif',
-        ],
+         '-apple-system',
+         'BlinkMacSystemFont',
+         'Segoe UI',
+         'Roboto',
+         'Helvetica Neue',
+         'Arial',
+         'sans-serif',
+        ]
       },
       spacing: {
         '8': '8px',

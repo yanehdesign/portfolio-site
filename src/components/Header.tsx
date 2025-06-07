@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header className="w-full bg-pink-100 py-20">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <h1 className="text-2xl font-display font-bold text-pink-800">yaneh.design</h1>
+          <h1 className="text-2xl font-sans font-bold text-pink-800">yaneh.design</h1>
           <div className="hidden md:flex space-x-8">
             {<a href="#projects" className="text-pink-800 hover:text-pink-600 transition-colors">Projects</a> }
             <a href="#contact" className="text-pink-800 hover:text-pink-600 transition-colors">Contact</a>
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         </nav>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="max-w-2xl mx-auto text-center md:text-center">
-            <h2 className="text-6xl md:text-8xl font-display font-bold mb-6 text-pink-800 animate-fade-in">
+            <h2 className="text-6xl md:text-8xl font-sans font-bold mb-6 text-pink-800 animate-fade-in">
               Design that
               <br />
               makes waves
