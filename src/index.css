@@ -2,19 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-1: #f2f2f2;
+  --color-2: #d57b8c;
+  --color-3: #c95974;
+  --color-4: #f0707d;
+  --color-5: #d0b3b3;
+}
+
+body {
+  font-family: 'Raleway', 'Tahoma', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tahoma', 'Raleway', Arial, sans-serif;
+}
+
 .bg-animated-gradient {
   position: absolute;
   inset: 0;
   z-index: -10;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #ffc1cc, #f9b4b8, #ff6670, #d32c4f, #ffc1cc);
+  z-index: -20;
+  background: linear-gradient(45deg, #ffc1cc, #f9b4b8, #ff6670, #ffc1cc);
   background-size: 400% 400%;
-  animation: gradientMove 10s ease-in-out infinite;
+  animation: gradientMove 20s ease-in-out infinite;
 }
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(135deg, #a8325a, #d32c4f, #8b1452, #4b063a, #d32c4f, #a8325a);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.bg-pattern {
+  background: url('/src/assets/pattern.png');
+  background-size: 600px 600px; /* or larger */
+  /* Remove position, top, left, width, height, z-index if using Tailwind classes */
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float 10s ease-in-out infinite; }
+.animate-float-fast { animation: float 3s ease-in-out infinite; }
+
+.click-prev, .slick-next {
+  color: var(--color-4);
+  background: var(--color-1);
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
 }

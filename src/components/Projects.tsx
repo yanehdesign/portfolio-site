@@ -1,6 +1,8 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { projects } from '../data/projectsData';
 import ProjectCard from './ProjectCard';
+import { Route } from 'react-router-dom';
+import ProjectDetail from './ProjectDetail';
 
 export default function Contact() {
   return (
@@ -45,3 +47,5 @@ export default function Contact() {
     ))}
   </div>
 </section>;
+
+<Route path="/project/:id" element={<ProjectDetail />} />

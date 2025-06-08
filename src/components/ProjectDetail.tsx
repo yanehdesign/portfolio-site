@@ -1,28 +1,45 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from '../data/projectsData';
+import FullWidthCarousel from "./FullWidthCarousel";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const project = projects.find(p => p.id === Number(id));
+  const project = projects.find((p) => String(p.id) === String(id));
 
   if (!project) return <div>Project not found.</div>;
 
   return (
     <div className="container mx-auto px-6 py-16">
-      <button className="mb-4 text-pink-800" onClick={() => navigate(-1)}>&larr; Back</button>
-      <h1 className="text-4xl font-sans mb-4">{project.title}</h1>
-      <img src={project.imageUrl} alt={project.title} className="mb-6 rounded" />
-      <p className="mb-6">{project.description}</p>
-      {/* Add more detailed info about Puebla here */}
-      {project.id === 1 && (
-        <div>
-          <h2 className="text-2xl font-semibold mb-2">More About Puebla</h2>
-          <p>This minimalist approach emphasizes relaxing, comforting elements that showcase Puebla’s cultural heritage in an elegant and approachable way.</p>
+      <button
+        className="mb-4 font-raleway text-lg font-semibold"
+        style={{ color: 'var(--color-1)' }}
+        onClick={() => navigate(-1)}
+      >
+        &larr; Volver
+      </button>
+      <h1
+        className="text-9xl font-tahoma font-bold mb-30 leading-tight text-center"
+        style={{ color: 'var(--color-1)' }}
+      >
+        {project.title}
+      </h1>
+      {project.details && (
+        <div className="mb-8 font-raleway font-light text-lg text-center">
+          <p style={{ color: 'black', }}>{project.details}</p>
         </div>
+      )}
+
+      <img src={project.imageUrl} alt={project.title} className="mb-20 rounded shadow" />
+      {Array.isArray(project.extraImages) && project.extraImages.length > 0 && (
+        <FullWidthCarousel images={project.extraImages} />
       )}
     </div>
   );
 };
 
 export default ProjectDetail;
+
+/* In your routing file, ensure you have the following route defined:
+<Route path="/project/:id" element={<ProjectDetail />} />
+*/

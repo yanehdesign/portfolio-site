@@ -2,13 +2,15 @@ import React from "react";
 import Slider from "react-slick";
 import ProjectCard from "./ProjectCard";
 import { Project } from "../types";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectsCarouselProps {
   projects: Project[];
   onProjectClick: (project: Project) => void;
 }
 
-const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects, onProjectClick }) => {
+const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
+  const navigate = useNavigate();
   const settings = {
     dots: false,
     infinite: true,
@@ -23,8 +25,42 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects, onProject
     fade: false,                // Disable fade effect
     lazyLoad: "ondemand" as const,       // Lazy load images
     arrows: true,              // Show navigation arrows
-    prevArrow: <button className="click-prev">Prev</button>, // Custom previous arrow
-    nextArrow: <button className="slick-next">Next</button>, // Custom next arrow
+    prevArrow: (
+      <button
+        className="slick-prev"
+        style={{
+          fontSize: '400.5rem',      // Make arrow text/icon bigger
+          width: '60px',
+          height: '60px',
+          borderRadius: '50%',
+          background: 'var(--color-4)',
+          color: 'var(--color-1)',
+          border: '10px solid var(--color-1)',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          cursor: 'default'
+        }}
+      >
+        Prev
+      </button>
+    ), // Custom previous arrow
+    nextArrow: (
+      <button
+        className="slick-next"
+        style={{
+          fontSize: '400.5rem',      // Make arrow text/icon bigger
+          width: '60px',
+          height: '60px',
+          borderRadius: '50%',
+          background: 'var(--color-4)',
+          color: 'var(--color-1)',
+          border: 'none',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          cursor: 'defualt'
+        }}
+      >
+        Next
+      </button>
+    ), // Custom next arrow
     autoplay: true,            // Enable autoplay
     autoplaySpeed: 3000,       // Autoplay speed in milliseconds
     pauseOnHover: true,        // Pause on hover
@@ -35,13 +71,21 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects, onProject
     initialSlide: 0, // Start at the first slide 
   };
 
+  if (!projects || projects.length === 0) return null;
+
   return (
-    <div className="relative left-1/2 w-screen -translate-x-1/2 px-0 py-0 mb-16">
+    <div
+      className="relative left-1/2 w-screen -translate-x-1/2 px-0 py-0 mb-16 z-20"
+      style={{ background: 'var(--color-1)' }}
+    >
       <Slider {...settings} className="w-full max-w-screen-2xl mx-auto">
         {projects.map((project) => (
           <div key={project.id} className="flex justify-center">
             <div className="w-full max-w-2xl">
-              <ProjectCard project={project} onClick={() => onProjectClick(project)} />
+              <ProjectCard
+                project={project}
+                onClick={() => navigate(`/project/${project.id}`)}
+              />
             </div>
           </div>
         ))}

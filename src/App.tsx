@@ -1,43 +1,53 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import { Footer } from './components/Footer';
 import { projects } from './data/projectsData';
 import ProjectDetail from './components/ProjectDetail';
 import ProjectsCarousel from "./components/ProjectsCarousel";
-import './index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './index.css';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isProjectDetail = location.pathname.startsWith("/project/");
+
   useEffect(() => {
     document.title = "Janet Garcia | Graphic Designer";
   }, []);
 
-  const handleProjectClick = (project: any) => {
-    // What should happen when a project is clicked?
-    // For now, just log it:
-    console.log(project);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const bgPattern = document.querySelector('.bg-pattern');
+      if (bgPattern) {
+        const patternOffset = window.scrollY * 0.1;
+        (bgPattern as HTMLElement).style.transform = `translateY(${patternOffset}px)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
+    <>
+      {!isProjectDetail && <Header />}
+      <Routes>
+        <Route path="/" element={<ProjectsCarousel projects={projects} onProjectClick={function (): void {
+          throw new Error('Function not implemented.');
+        } } />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
     <Router>
-      <div className="min-h-screen bg-pink-100 text-white font-sans">
-        <div className="absolute inset-0 w-full h-full -z-10 bg-animated-gradient"></div>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <ProjectsCarousel projects={projects} onProjectClick={handleProjectClick} />
-              </>
-            }
-          />
-          <Route path="/project/:id" element={<ProjectDetail />} />
-        </Routes>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }
