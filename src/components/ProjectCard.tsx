@@ -10,39 +10,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 h-[400px] cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
-      {/* Make the image clickable */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out"
-        style={{ 
+        style={{
           backgroundImage: `url(${project.imageUrl})`,
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-          cursor: 'pointer'
         }}
-        onClick={onClick}
-        aria-label={`View details for ${project.title}`}
-        role="button"
-        tabIndex={0}
-        onKeyPress={e => { if (e.key === 'Enter') onClick(); }}
       />
-      
+      {/* Hover overlay */}
       <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
-        style={{
-          background: 'linear-gradient(to top, var(--color-3), rgba(201,89,116,0.7), transparent)'
-        }}
-        onClick={onClick}
-        role="button"
-        tabIndex={0}
-        aria-label={`View details for ${project.title}`}
-        onKeyPress={e => { if (e.key === 'Enter') onClick(); }}
+        className={`absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center px-4 transition-opacity duration-300 ${
+          isHovered ? 'opacity-100' : 'opacity-0'
+        }`}
       >
-        <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--color-1)' }}>{project.title}</h3>
-        <p className="mb-4" style={{ color: 'var(--color-5)' }}>{project.description}</p>
+        <h3 className="text-2xl font-bold mb-2 text-white">{project.title}</h3>
+        <p className="mb-2 text-white">{project.goal}</p>
+        <p className="mb-2 text-white text-sm"><b>Role:</b> {project.role}</p>
+        <p className="mb-2 text-white text-sm"><b>Tools:</b> {project.tools?.join(', ')}</p>
+        <p className="mb-2 text-white text-xs">{project.challenges}</p>
       </div>
     </div>
   );

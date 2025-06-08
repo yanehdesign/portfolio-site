@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header: React.FC<{ small?: boolean }> = ({ small }) => {
+const Header: React.FC = () => {
   return (
-    <header className={small ? "py-4" : "py-10"}>
+    <header className="w-full py-10">
       <div className="relative">
         {/* Animated Gradient Background */}
         <div className="fixed inset-0 w-full h-full -z-20 animate-gradient"></div>
@@ -62,9 +62,9 @@ const Header: React.FC<{ small?: boolean }> = ({ small }) => {
                 className="font-[Tahoma,sans-serif] text-[6rem] md:text-[8rem] font-bold mb-10 leading-[1.1] z-20"
                 style={{ color: 'var(--color-4)' }}
               >
-                YANEH
+                JANET
                 <br />
-                design
+                GARCIA
               </h1>
               <h2
                 className="md:text-2xl font-raleway font-semibold mb-2 animate-fade-in leading-loose z-20"
@@ -76,7 +76,6 @@ const Header: React.FC<{ small?: boolean }> = ({ small }) => {
                 className="text-2xl md:text-xl font-raleway font-light animate-fade-in z-20"
                 style={{ color: 'var(--color-0)' }}
               >
-                By <span style={{fontWeight: 600 }}>Janet Garcia</span>
               </p>
             </div>
           </div>

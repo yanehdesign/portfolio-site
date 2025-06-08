@@ -1,4 +1,10 @@
+import { ReactNode } from "react";
+
 export interface Project {
+  challenges: ReactNode;
+  tools: any;
+  role: ReactNode;
+  goal: ReactNode;
   id: number;
   title: string;
   imageUrl: string;

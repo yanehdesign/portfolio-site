@@ -12,8 +12,10 @@ const ProjectDetail = () => {
   return (
     <div className="container mx-auto px-6 py-16">
       <button
-        className="mb-4 font-raleway text-lg font-semibold"
-        style={{ color: 'var(--color-1)' }}
+        className="mb-4 font-raleway text-lg font-semibold transition-colors duration-200"
+        style={{ color: 'var(--color-1)', background: 'transparent' }}
+        onMouseOver={e => (e.currentTarget.style.background = 'var(--color-6)')}
+        onMouseOut={e => (e.currentTarget.style.background = 'transparent')}
         onClick={() => navigate(-1)}
       >
         &larr; Volver

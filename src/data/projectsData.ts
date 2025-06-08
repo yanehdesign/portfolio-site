@@ -1,4 +1,17 @@
-import { Project, ProcessItem } from '../types';
+import { ProcessItem } from '../types';
+
+export type Project = {
+  id: number;
+  title: string;
+  imageUrl: string;
+  description: string;
+  details: string;
+  extraImages: string[];
+  goal?: string;           // Project goal or client brief
+  role?: string;           // Your role
+  tools?: string[];        // Tools/technologies used
+  challenges?: string;     // Key challenges and solutions
+};
 
 export const projects: Project[] = [
   {
@@ -12,6 +25,10 @@ export const projects: Project[] = [
       "/images/brandstationary.png",
       "/images/brandbag.png"
     ],
+    goal: "Rebrand Puebla to highlight its serene beauty.",
+    role: "Lead Designer",
+    tools: ["Photoshop", "Illustrator"],
+    challenges: "Balancing tradition with modern design."
   },
   {
     id: 2,
