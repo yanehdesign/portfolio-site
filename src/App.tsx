@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -30,19 +30,23 @@ function AppContent() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
   return (
     <>
       <Navbar />
       {!isProjectDetail && <Header />}
       <Routes>
-        <Route path="/" element={<ProjectsCarousel projects={projects} onProjectClick={function (): void {
-          throw new Error('Function not implemented.');
-        } } />} />
+        <Route
+          path="/"
+          element={
+            <ProjectsCarousel
+              projects={projects}
+              onProjectClick={project => window.location.hash = `/project/${project.id}`}
+            />
+          }
+        />
         <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
       <Footer />
-      <a href="#contact" style={{ color: 'var(--color-4)' }}>Contact</a>
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full py-10">
+    <header id="intro" className="w-full py-10 overflow-hidden">
       <div className="relative">
         {/* Animated Gradient Background */}
         <div className="fixed inset-0 w-full h-full -z-20 animate-gradient"></div>
@@ -11,7 +11,13 @@ const Header: React.FC = () => {
         {/* Floating Shapes */}
         <div
           className="fixed rounded-full mix-blend-soft-light animate-float-slow"
-          style={{ background: 'var(--color-1)', top: '100px', left: '5%', width: '200px', height: '200px' }}
+          style={{
+            background: 'var(--color-1)',
+            top: '100px',
+            left: '5%',
+            width: '120px', // smaller for mobile
+            height: '120px'
+          }}
         ></div>
         <div
           className="fixed rounded-full mix-blend-soft-light animate-float -z-10"
@@ -42,7 +48,7 @@ const Header: React.FC = () => {
           style={{ background: 'var(--color-3)', top: '400px', left: '10%',width: '200px', height: '200px'}}
         ></div>
         {/* ...add as many as you like, changing positions, sizes, and colors... */}
-        <div className="container mx-auto px-10 py-10">
+        <div className="container mx-auto px-4 sm:px-8 py-10">
           <nav className="flex items-center justify-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow relative z-20 animate-float">
               <span
@@ -59,7 +65,7 @@ const Header: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
             <div className="max-w-10xl mx-auto text-center md:text-center z-20">
               <h1
-                className="font-[Tahoma,sans-serif] text-[6rem] md:text-[8rem] font-bold mb-10 leading-[1.1] z-20"
+                className="font-[Tahoma,sans-serif] text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-bold mb-10 leading-[1.1] z-20"
                 style={{ color: 'var(--color-4)' }}
               >
                 JANET

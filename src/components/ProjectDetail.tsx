@@ -20,7 +20,7 @@ const ProjectDetail = () => {
       >
         &larr; Volver
       </button>
-      <h1
+      <h1 onClick={() => navigate(-1)}
         className="text-9xl font-tahoma font-bold mb-30 leading-tight text-center"
         style={{ color: 'var(--color-1)' }}
       >
@@ -28,11 +28,12 @@ const ProjectDetail = () => {
       </h1>
       {project.details && (
         <div className="mb-8 font-raleway font-light text-lg text-center">
-          <p style={{ color: 'black', }}>{project.details}</p>
+          <p style={{ color: 'black' }}>{project.details}</p>
         </div>
       )}
-
-      <img src={project.imageUrl} alt={project.title} className="mb-20 rounded shadow" />
+      <div className="text-center">
+        <img src={project.imageUrl} alt={project.title} className="mb-20 rounded shadow" />
+      </div>
       {Array.isArray(project.extraImages) && project.extraImages.length > 0 && (
         <FullWidthCarousel images={project.extraImages} />
       )}
@@ -43,5 +44,5 @@ const ProjectDetail = () => {
 export default ProjectDetail;
 
 /* In your routing file, ensure you have the following route defined:
-<Route path="/project/:id" element={<ProjectDetail />} />
+<Route path="/project/:id" element={<ProjectDetail />} />;
 */

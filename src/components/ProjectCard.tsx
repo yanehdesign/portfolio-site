@@ -30,10 +30,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         }`}
       >
         <h3 className="text-2xl font-bold mb-2 text-white">{project.title}</h3>
-        <p className="mb-2 text-white">{project.goal}</p>
-        <p className="mb-2 text-white text-sm"><b>Role:</b> {project.role}</p>
-        <p className="mb-2 text-white text-sm"><b>Tools:</b> {project.tools?.join(', ')}</p>
-        <p className="mb-2 text-white text-xs">{project.challenges}</p>
+        {project.goal && <p className="mb-2 text-white">{project.goal}</p>}
+        {project.role && (
+          <p className="mb-2 text-white text-sm">
+            <b>Role:</b> {project.role}
+          </p>
+        )}
+        {project.tools && project.tools.length > 0 && (
+          <p className="mb-2 text-white text-sm">
+            <b>Tools:</b> {project.tools.join(', ')}
+          </p>
+        )}
+        {project.challenges && (
+          <p className="mb-2 text-white text-xs">{project.challenges}</p>
+        )}
       </div>
     </div>
   );

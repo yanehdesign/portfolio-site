@@ -2,10 +2,10 @@ import { FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="py-20" style={{ background: 'var(--color-3)' }}>
-      <div className="container mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
+    <footer id="contact" className="py-12 bg-[color:var(--color-3)] bg-opacity-90">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8 px-4 text-center md:text-left">
         {/* Company Info */}
-        <aside className="flex flex-col items-start mb-6">
+        <aside className="flex flex-col items-center md:items-start mb-6 md:mb-0">
           <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow mb-2">
             <span
               className="font-bold text-xl font-sans"
@@ -27,8 +27,8 @@ export const Footer = () => {
         </aside>
 
         {/* Social Media Links */}
-        <nav className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-          <div className="flex gap-4">
+        <nav className="flex flex-col items-center md:items-end gap-4">
+          <div className="flex gap-6 justify-center">
             {/* Instagram */}
             <a
               href="https://www.instagram.com/yanehdesign"
@@ -61,7 +61,7 @@ export const Footer = () => {
             </a>
           </div>
           {/* Email and Location */}
-          <div className="flex flex-col items-start md:items-end mt-4 md:mt-0">
+          <div className="flex flex-col items-center md:items-end mt-2">
             <a
               href="mailto:yaneh@yanehdesign.com"
               style={{ color: 'var(--color-5)', textDecoration: 'underline' }}

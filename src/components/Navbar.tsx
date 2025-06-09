@@ -1,27 +1,31 @@
-import { Link } from 'react-router-dom';
+const Navbar = () => {
 
-const Navbar = () => (
-  <nav
-    className="sticky top-0 z-50 w-full bg-white shadow"
-    style={{ background: 'var(--color-1)' }}
-  >
-    <div className="container mx-auto flex justify-between items-center py-4 px-6">
-      <span className="font-bold text-xl" style={{ color: 'var(--color-4)' }}>
-        Yaneh Design
-      </span>
-      <ul className="flex gap-8 font-semibold">
-        <li>
-          <Link to="/" style={{ color: 'var(--color-4)' }}>Home</Link>
-        </li>
-        <li>
-          <Link to="/" style={{ color: 'var(--color-4)' }}>Projects</Link>
-        </li>
-        <li>
-          <Link to="#contact" style={{ color: 'var(--color-4)' }}>Contact</Link>
-        </li>
-      </ul>
-    </div>
-  </nav>
-);
+  return (
+    <nav
+      className="sticky top-0 z-50 w-full bg-white shadow"
+      style={{ background: 'white' }}
+    >
+      <div className="container mx-auto flex flex-row justify-between items-center py-4 px-4 sm:px-6">
+        <span className="font-bold text-xl" style={{ color: 'var(--color-4)' }}>
+          Yaneh Design
+        </span>
+        <ul className="flex flex-row gap-6 font-semibold">
+          <li>
+            <a href="#projects" style={{ color: 'var(--color-4)' }}>Projects</a>
+          </li>
+          <li>
+            <a href="#contact" style={{ color: 'var(--color-4)' }}>Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="projects">
+        ...
+      </div>
+      <footer id="contact">
+        ...
+      </footer>
+    </nav>
+  );
+};
 
 export default Navbar;

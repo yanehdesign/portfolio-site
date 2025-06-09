@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import ProjectCard from "./ProjectCard";
 import { Project } from "../types";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+import { Footer } from './Footer';
 
 interface ProjectsCarouselProps {
   projects: Project[];
@@ -35,7 +37,6 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
           borderRadius: '50%',
           background: 'var(--color-4)',
           color: 'var(--color-1)',
-          border: '10px solid var(--color-1)',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           cursor: 'default'
         }}
@@ -74,24 +75,28 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <div
-      className="relative left-1/2 w-screen -translate-x-1/2 px-0 py-0 mb-16 z-20"
-      style={{ background: 'var(--color-1)' }}
-    >
-      <Slider {...settings} className="w-full max-w-screen-2xl mx-auto">
-        {projects.map((project) => (
-          <div key={project.id} className="flex justify-center">
-            <div className="w-full max-w-2xl">
-              <ProjectCard
-                project={project}
-                onClick={() => navigate(`/project/${project.id}`)}
-              />
+    <>
+      <Header />
+      <div
+        id="projects"
+        className="relative left-1/2 w-screen -translate-x-1/2 px-0 py-0 mb-16 z-20"
+        style={{ background: 'var(--color-1)' }}
+      >
+        <Slider {...settings} className="w-full max-w-screen-2xl mx-auto">
+          {projects.map((project) => (
+            <div key={project.id} className="flex justify-center">
+              <div className="w-full max-w-2xl">
+                <ProjectCard
+                  project={project}
+                  onClick={() => navigate(`/project/${project.id}`)}
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      
-    </div>
+          ))}
+        </Slider>
+      </div>
+      <Footer />
+    </>
   );
 };
 

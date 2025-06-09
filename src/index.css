@@ -17,6 +17,10 @@ body {
   color: var(--color-4);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-animated-gradient {
   position: absolute;
   inset: 0;

@@ -1,21 +1,20 @@
-import { ReactNode } from "react";
 
-export interface Project {
-  challenges: ReactNode;
-  tools: any;
-  role: ReactNode;
-  goal: ReactNode;
+export type Project = {
   id: number;
   title: string;
   imageUrl: string;
   description: string;
   details: string;
-  extraImages: string[]; // <-- THIS MUST BE string[]
-}
+  extraImages: string[];
+  goal?: string;           // Project goal or client brief
+  role?: string;           // Your role
+  tools?: string[];        // Tools/technologies used
+  challenges?: string;     // Key challenges and solutions
+};
 
-export interface ProcessItem {
+export type ProcessItem = {
   id: number;
   title: string;
   description: string;
   imageUrl: string;
-}
+};
