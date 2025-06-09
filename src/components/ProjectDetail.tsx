@@ -19,7 +19,7 @@ const ProjectDetail = () => {
         onMouseOut={e => (e.currentTarget.style.background = 'transparent')}
         onClick={() => navigate(-1)}
       >
-        &larr; Volver
+        &larr; Back
       </button>
       <h1 onClick={() => navigate(-1)}
         className="text-9xl font-tahoma font-bold mb-30 leading-tight text-center"

@@ -33,12 +33,6 @@ html {
   animation: gradientMove 20s ease-in-out infinite;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 @keyframes gradient-move {
   0% {
     background-position: 0% 50%;
@@ -49,6 +43,25 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+body.animate-gradient {
+  min-height: 100vh;
+  background: none; /* Remove background and opacity here */
+  position: relative;
+}
+
+/* Add this for the gradient overlay */
+body.animate-gradient::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(135deg, #a8325a, #d32c4f, #8b1452, #4b063a, #d32c4f, #a8325a);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease-in-out infinite;
+  opacity: 0.1; /* Adjust as needed */
 }
 
 .animate-gradient {

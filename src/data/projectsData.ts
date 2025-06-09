@@ -5,74 +5,95 @@ export const projects: Project[] = [
     id: 1,
     title: "Puebla",
     imageUrl: "/images/CalmCulturePuebla.png",
-    description: "The Puebla rebrand uses simplicity and photography to highlight the city’s serene beauty and rich traditions, creating a calming identity.",
-    details: "This minimalist approach emphasizes relaxing, comforting elements that showcase Puebla’s cultural heritage in an elegant and approachable way.",
+    description: "A rebrand that captures the peaceful spirit and culture of Puebla.",
+    details: "I wanted to keep things simple and calm, using photography and soft design choices to show Puebla's beauty. It’s about letting the city’s story shine through without too much noise.",
+    goal: "Let Puebla’s calm and culture speak for itself.",
+    role: "Lead Designer",
+    tools: ["Photoshop", "Illustrator"],
+    challenges: "Bringing in modern design while respecting tradition.",
     extraImages: [
       "/images/brandcover.png",
       "/images/brandstationary.png",
       "/images/brandbag.png"
-    ],
-    goal: "Rebrand Puebla to highlight its serene beauty.",
-    role: "Lead Designer",
-    tools: ["Photoshop", "Illustrator"],
-    challenges: "Balancing tradition with modern design."
+    ]
   },
   {
     id: 2,
-    title: "Another Project",
+    title: "Puebla: Process",
     imageUrl: "/images/pueblaresearch.png",
-    description: "Puebla rebrand process.",
-    details: "This project is about...",
+    description: "A peek into how the Puebla brand came to life.",
+    details: "This part shows my sketching, research, and all the early ideas that shaped the final design. It’s messy in a good way — where everything starts to click.",
+    goal: "Show how ideas evolve into design.",
+    role: "Concept & Research",
+    tools: ["Sketchbook", "Adobe XD", "Miro"],
+    challenges: "Turning loose thoughts into something real.",
     extraImages: [
       "/images/another1.png",
       "/images/another2.png"
-    ],
+    ]
   },
   {
     id: 3,
-    title: "Magazine: Pause",
+    title: "PAUSE Magazine",
     imageUrl: "/images/pausecover.png",
-    description: "PAUSE is a magazine designed to showcase topics often dismissed as boring, transforming them through imaginative layouts,typography, and imagery.",
-    details: "This project involved...",
+    description: "Turning 'boring' topics into bold, fun magazine spreads.",
+    details: "PAUSE is about slowing down and seeing beauty in the everyday. I played with layout, type, and imagery to make things feel fresh and unexpected.",
+    goal: "Make people pause — and maybe smile — at something ordinary.",
+    role: "Editor & Designer",
+    tools: ["InDesign", "Photoshop"],
+    challenges: "Keeping it playful but still easy to read.",
     extraImages: [
       "/images/pause1.png",
       "/images/pause2.png"
-    ],
+    ]
   },
   {
     id: 4,
     title: "Masć",
     imageUrl: "/images/postermasc.png",
-    description: "Design for vibrant and dynamic pieces that celebrate artistic freedom and expression.",
-    details: "The designs for Masć are intended to...",
+    description: "A poster series that’s all about energy and self-expression.",
+    details: "This project let me have fun with color, shape, and movement. I wanted it to feel wild and free, like a celebration of being yourself.",
+    goal: "Celebrate bold, unfiltered creativity.",
+    role: "Visual Designer",
+    tools: ["Illustrator", "After Effects"],
+    challenges: "Letting the design be loud — without it getting lost.",
     extraImages: [
       "/images/masc1.png",
       "/images/masc2.png"
-    ],
+    ]
   },
   {
     id: 5,
-    title: "Ver",
+    title: "Ver: Latin Film Series",
     imageUrl: "/images/verposters.png",
-    description: "Ver is a movie event dedicated to showcasing films about Latino, inspired by my earlier work before pursuing graphic design.",
-    details: "This project was particularly special because...",
+    description: "A film event that feels close to home — about Latin stories and roots.",
+    details: "This one’s personal. It brought together my love for film and my cultural background. I leaned into warm tones and textures that feel familiar and heartfelt.",
+    goal: "Bring Latin stories to the spotlight, visually and emotionally.",
+    role: "Creative Direction",
+    tools: ["Photoshop", "Premiere Pro"],
+    challenges: "Keeping the emotion without overdesigning it.",
     extraImages: [
       "/images/ver1.png",
       "/images/ver2.png"
-    ],
+    ]
   },
   {
     id: 6,
-    title: "Summit Coffee",
+    title: "Summit Coffee: Sip Line",
     imageUrl: "/images/summitcoffee.png",
-    description: "Summit Sip brand features playful, nature-inspired icons. ",
-    details: "The inspiration for this project came from...",
+    description: "A playful brand for a coffee line inspired by nature and good moments.",
+    details: "This design is fun and outdoorsy — little icons, warm colors, and an easygoing vibe. It’s made to feel like something you’d take on a hike or sip on a slow morning.",
+    goal: "Make coffee branding feel friendly, not too serious.",
+    role: "Brand Designer",
+    tools: ["Illustrator", "Figma"],
+    challenges: "Keeping it fun but still part of the bigger Summit brand.",
     extraImages: [
       "/images/summit1.png",
       "/images/summit2.png"
-    ],
-  },
+    ]
+  }
 ];
+
 
 export const processItems: ProcessItem[] = [
   {

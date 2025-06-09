@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 className="font-bold text-6xl font-Tahoma"
                 style={{ color: 'var(--color-4)' }}
               >
-                Y
+                J
               </span>
               
             </div>

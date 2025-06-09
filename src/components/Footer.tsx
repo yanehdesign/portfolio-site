@@ -11,7 +11,7 @@ export const Footer = () => {
               className="font-bold text-xl font-sans"
               style={{ color: 'var(--color-4)' }}
             >
-              Y
+              J
             </span>
           </div>
           <p style={{ color: 'var(--color-2)', fontWeight: 700 }}>
