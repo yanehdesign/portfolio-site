@@ -10,6 +10,7 @@ const Arrow = ({ style, onClick, direction }: any) => (
       ${direction === 'left' ? 'left-12' : 'right-12'}`}
     style={{ ...style }}
     onClick={onClick}
+    type="button"
   >
     {direction === 'left' ? <FaChevronLeft size={50} /> : <FaChevronRight size={50} />}
   </button>

@@ -1,5 +1,4 @@
 const Navbar = () => {
-
   return (
     <nav
       className="sticky top-0 z-50 w-full bg-white shadow"
@@ -18,12 +17,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div id="projects">
-        ...
-      </div>
-      <footer id="contact">
-        ...
-      </footer>
     </nav>
   );
 };
