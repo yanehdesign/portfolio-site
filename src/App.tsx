@@ -5,9 +5,9 @@ import { Footer } from './components/Footer';
 import { projects } from './data/projectsData';
 import ProjectDetail from './components/ProjectDetail';
 import ProjectsCarousel from "./components/ProjectsCarousel";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import './index.css';
+import { useNavigate } from 'react-router-dom';
+import FullWidthCarousel from './FullWidthCarousel';
 
 function AppContent() {
   const location = useLocation();
@@ -58,6 +58,15 @@ function ProjectDetailWithKey() {
 }
 
 function App() {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      document.body.classList.add('no-animations');
+    } else {
+      document.body.classList.remove('no-animations');
+    }
+  }, []);
+
   return (
     <Router>
       <AppContent />

@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-1: #d57b8c;
-  --color-2: #f0707d;
-  --color-3: #f2f2f2;
-  --color-4: #4a4a4a;
-  --color-5: #d0b3b3;
-  --color-6: #c95974;
-  --color-bg: #f2f2f2;
+  --color-1: #b24256;
+  --color-2: #c4424d;
+  --color-3: #f7f7f7;
+  --color-4: #2e2e2e;
+  --color-5: #a77f7f;
+  --color-6: #9e2f47;
+  --color-bg: #f7f7f7;
 }
+
 
 body {
   background: #f2f2f2;
@@ -89,19 +90,48 @@ body.animate-gradient::before {
 .animate-float-slow { animation: float 10s ease-in-out infinite; }
 .animate-float-fast { animation: float 3s ease-in-out infinite; }
 
-.click-prev, .slick-next {
-  color: var(--color-4);
-  background: var(--color-1);
-  border-radius: 50%;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-weight: 700;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
-
 .button-6-hover:hover {
   background: var(--color-6);
 }
+
+.no-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+/* Make Swiper navigation buttons round, semi-transparent, and with a smaller arrow */
+.swiper-button-next,
+.swiper-button-prev {
+  background: rgba(255,255,255,0.5);   /* semi-transparent white */
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  color: var(--color-1);               /* arrow color */
+  font-size: 1.2rem;                   /* smaller arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(178,66,86,0.7);     /* more visible on hover */
+  color: #fff;                         /* white arrow on hover */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.2rem;                   /* ensure arrow stays small */
+}
+

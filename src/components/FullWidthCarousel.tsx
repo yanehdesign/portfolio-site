@@ -1,54 +1,45 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
-// Custom Arrow Component
-const Arrow = ({ style, onClick, direction }: any) => (
-  <button
-    className={`absolute top-1/2 z-10 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow
-      ${direction === 'left' ? 'left-12' : 'right-12'}`}
-    style={{ ...style }}
-    onClick={onClick}
-    type="button"
-  >
-    {direction === 'left' ? <FaChevronLeft size={50} /> : <FaChevronRight size={50} />}
-  </button>
-);
-
-const FullWidthCarousel = ({ images }: { images: string[] }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    centerMode: false,
-    adaptiveHeight: true,
-    prevArrow: <Arrow direction="left" />,
-    nextArrow: <Arrow direction="right" />,
-  };
+export default function FullWidthCarousel({ images }: { images: string[] }) {
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
 
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="w-full relative px-0 sm:px-4">
-      <Slider {...settings}>
+    <div className="w-full max-w-3xl mx-auto py-8">
+      <Swiper
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        navigation={false}
+        spaceBetween={30}
+        slidesPerView={1}
+        style={{ borderRadius: "1rem" }}
+      >
         {images.map((img, idx) => (
-          <div key={idx} className="w-full flex justify-center relative">
+          <SwiperSlide key={idx}>
             <img
               src={img}
               alt={`Slide ${idx + 1}`}
-              className="w-full max-h-[60vh] object-contain rounded"
-              style={{ background: "#fff" }}
+              className="w-full max-h-[60vh] object-contain rounded bg-white"
               loading="lazy"
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
+      {/* Custom arrows below carousel */}
+      <div className="flex justify-center gap-4 mt-4">
+        <button ref={prevRef} className="p-2 bg-gray-200 rounded-full" aria-label="Previous">
+          &#8592;
+        </button>
+        <button ref={nextRef} className="p-2 bg-gray-200 rounded-full" aria-label="Next">
+          &#8594;
+        </button>
+      </div>
     </div>
   );
-};
-
-export default FullWidthCarousel;
+}

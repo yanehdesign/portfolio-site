@@ -7,18 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pink: {
-          50:  '#ffc1cc',
-          100: '#f9b4b8',
-          200: '#eb9596',
-          300: '#ff6670',
-          400: '#d32c4f',
-          500: '#d32c4f',
-          600: '#d32c4f',
-          700: '#d32c4f',
-          800: '#d32c4f',
-          900: '#d32c4f',
-        },
+        color1: '#b24256',
+        color2: '#c4424d',
+        color3: '#f7f7f7',
+        color4: '#2e2e2e',
+        color5: '#a77f7f',
+        color6: '#9e2f47', // <-- comma here
       },
       animation: {
         gradient: "gradientBG 8s ease-in-out infinite",
@@ -39,3 +33,4 @@ module.exports = {
   },
   plugins: [],
 };
+
