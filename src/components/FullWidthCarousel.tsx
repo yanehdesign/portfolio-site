@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function FullWidthCarousel({ images }: { images: string[] }) {
@@ -13,9 +14,20 @@ export default function FullWidthCarousel({ images }: { images: string[] }) {
   return (
     <div className="w-full max-w-3xl mx-auto py-8">
       <Swiper
-        modules={[Pagination]}
+        modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
-        navigation={false}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onInit={(swiper) => {
+          // @ts-ignore
+          swiper.params.navigation.prevEl = prevRef.current;
+          // @ts-ignore
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
         spaceBetween={30}
         slidesPerView={1}
         style={{ borderRadius: "1rem" }}

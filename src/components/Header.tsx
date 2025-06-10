@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header id="intro" className="w-full py-10 overflow-hidden">
+    <header id="intro" className="w-full py-10 overflow-hidden" role="banner">
       <div className="relative">
         {/* Animated Gradient Background */}
         <div className="fixed inset-0 w-full h-full -z-20 animate-gradient"></div>
@@ -52,21 +52,18 @@ const Header: React.FC = () => {
           <nav className="flex items-center justify-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow relative z-20 animate-float">
               <span
-                className="font-bold text-6xl font-Tahoma"
-                style={{ color: 'var(--color-4)' }}
+                className="font-bold text-6xl"
+                style={{ color: 'var(--color-4)', fontFamily: 'Tahoma, sans-serif' }}
               >
                 J
               </span>
-              
             </div>
-            {/* Remove or comment out the empty flex container if not needed */}
-            {/* <div className="hidden md:flex space-x-8"></div> */}
           </nav>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
             <div className="max-w-10xl mx-auto text-center md:text-center z-20">
               <h1
-                className="font-[Tahoma,sans-serif] text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-bold mb-10 leading-[1.1] z-20"
-                style={{ color: 'var(--color-4)' }}
+                className="text-[3rem] xs:text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-bold mb-10 leading-[1.1] z-20"
+                style={{ color: 'var(--color-4)', fontFamily: 'Tahoma, sans-serif' }}
               >
                 JANET
                 <br />
@@ -80,8 +77,9 @@ const Header: React.FC = () => {
               </h2>
               <p
                 className="text-2xl md:text-xl font-raleway font-light animate-fade-in z-20"
-                style={{ color: 'var(--color-0)' }}
+                style={{ color: 'var(--color-4)' }}
               >
+                {/* Optional subtitle or description here */}
               </p>
             </div>
           </div>
