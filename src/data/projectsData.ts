@@ -5,12 +5,12 @@ export const projects: Project[] = [
     id: 1,
     title: "Puebla",
     imageUrl: "/images/CalmCulturePuebla.png",
-    description: "A rebrand that captures the peaceful spirit and culture of Puebla.",
-    details: "I wanted to keep things simple and calm, using photography and soft design choices to show Puebla's beauty. It’s about letting the city’s story shine through without too much noise.",
+    description: "A rebrand that reflects the calm spirit and culture of Puebla.",
+    details: "I focused on simplicity and softness, using photography and minimal design to let the city's story come through clearly.",
     goal: "Let Puebla’s calm and culture speak for itself.",
     role: "Lead Designer",
     tools: ["Photoshop", "Illustrator"],
-    challenges: "Bringing in modern design while respecting tradition.",
+    challenges: "Blending modern design with traditional roots.",
     extraImages: [
       "/images/brandcover.png",
       "/images/brandstationary.png",
@@ -21,12 +21,12 @@ export const projects: Project[] = [
     id: 2,
     title: "Puebla: Process",
     imageUrl: "/images/pueblaresearch.png",
-    description: "A peek into how the Puebla brand came to life.",
-    details: "This part shows my sketching, research, and all the early ideas that shaped the final design. It’s messy in a good way — where everything starts to click.",
-    goal: "Show how ideas evolve into design.",
+    description: "A behind-the-scenes look at the Puebla brand.",
+    details: "This shows the early research, sketches, and ideas that shaped the final design. It’s messy in a good way — where things start to come together.",
+    goal: "Show how ideas turn into design.",
     role: "Concept & Research",
     tools: ["Sketchbook", "Adobe XD", "Miro"],
-    challenges: "Turning loose thoughts into something real.",
+    challenges: "Shaping raw ideas into a clear direction.",
     extraImages: [
       "/images/another1.png",
       "/images/another2.png"
@@ -36,12 +36,12 @@ export const projects: Project[] = [
     id: 3,
     title: "PAUSE Magazine",
     imageUrl: "/images/pausecover.png",
-    description: "Turning 'boring' topics into bold, fun magazine spreads.",
-    details: "PAUSE is about slowing down and seeing beauty in the everyday. I played with layout, type, and imagery to make things feel fresh and unexpected.",
-    goal: "Make people pause — and maybe smile — at something ordinary.",
+    description: "Turning everyday topics into bold, fun spreads.",
+    details: "PAUSE is about slowing down and finding beauty in the ordinary. I used playful layouts and type to make it feel fresh and surprising.",
+    goal: "Make people pause and enjoy the small things.",
     role: "Editor & Designer",
     tools: ["InDesign", "Photoshop"],
-    challenges: "Keeping it playful but still easy to read.",
+    challenges: "Keeping it fun without losing readability.",
     extraImages: [
       "/images/pause1.png",
       "/images/pause2.png"
@@ -51,12 +51,12 @@ export const projects: Project[] = [
     id: 4,
     title: "Masć",
     imageUrl: "/images/postermasc.png",
-    description: "A poster series that’s all about energy and self-expression.",
-    details: "This project let me have fun with color, shape, and movement. I wanted it to feel wild and free, like a celebration of being yourself.",
-    goal: "Celebrate bold, unfiltered creativity.",
+    description: "A poster series full of energy and expression.",
+    details: "This was a space to experiment — bold colors, dynamic shapes, and movement. I wanted it to feel alive and unapologetically creative.",
+    goal: "Celebrate bold, unfiltered self-expression.",
     role: "Visual Designer",
     tools: ["Illustrator", "After Effects"],
-    challenges: "Letting the design be loud — without it getting lost.",
+    challenges: "Keeping the energy without overcomplicating it.",
     extraImages: [
       "/images/masc1.png",
       "/images/masc2.png"
@@ -66,12 +66,12 @@ export const projects: Project[] = [
     id: 5,
     title: "Ver: Latin Film Series",
     imageUrl: "/images/verposters.png",
-    description: "A film event that feels close to home — about Latin stories and roots.",
-    details: "This one’s personal. It brought together my love for film and my cultural background. I leaned into warm tones and textures that feel familiar and heartfelt.",
-    goal: "Bring Latin stories to the spotlight, visually and emotionally.",
+    description: "A film event that highlights Latin roots and stories.",
+    details: "This project connected my love for film with my cultural background. I used warm tones and textures to make it feel personal and heartfelt.",
+    goal: "Shine a light on Latin stories — visually and emotionally.",
     role: "Creative Direction",
     tools: ["Photoshop", "Premiere Pro"],
-    challenges: "Keeping the emotion without overdesigning it.",
+    challenges: "Keeping it emotional without overdesigning.",
     extraImages: [
       "/images/ver1.png",
       "/images/ver2.png"
@@ -81,19 +81,15 @@ export const projects: Project[] = [
     id: 6,
     title: "Summit Coffee: Sip Line",
     imageUrl: "/images/summitcoffee.png",
-    description: "A playful brand for a coffee line inspired by nature and good moments.",
-    details: "This design is fun and outdoorsy — little icons, warm colors, and an easygoing vibe. It’s made to feel like something you’d take on a hike or sip on a slow morning.",
-    goal: "Make coffee branding feel friendly, not too serious.",
+    description: "A fun, outdoorsy brand for a new coffee line.",
+    details: "I designed this with nature in mind — small icons, warm colors, and a relaxed feel. It's made for easy moments, like hikes or slow mornings.",
+    goal: "Make coffee branding feel friendly and down-to-earth.",
     role: "Brand Designer",
-    tools: ["Illustrator", "Figma"],
-    challenges: "Keeping it fun but still part of the bigger Summit brand.",
-    extraImages: [
-      "/images/summit1.png",
-      "/images/summit2.png"
-    ]
+    tools: ["Illustrator", "Photoshop"],
+    challenges: "Balancing playfulness with professionalism.",
+    extraImages: []
   }
 ];
-
 
 export const processItems: ProcessItem[] = [
   {

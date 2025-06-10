@@ -9,12 +9,22 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleClick = () => {
+    onClick();
+  };
+
   return (
     <div
+      role="button"
+      aria-label="View project details"
+      tabIndex={0}
+      onClick={handleClick}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') handleClick();
+      }}
       className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-300 h-[400px] cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
     >
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out"
@@ -44,6 +54,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         {project.challenges && (
           <p className="mb-2 text-white text-xs">{project.challenges}</p>
         )}
+      </div>
+      <div className="bg-white/70 backdrop-blur-md rounded-lg p-6">
+        {/* Your content here */}
       </div>
     </div>
   );
