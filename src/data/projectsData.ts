@@ -1,5 +1,6 @@
 import { Project, ProcessItem } from '../types';
 
+// Featured Projects
 export const projects: Project[] = [
   {
     id: 1,
@@ -7,7 +8,7 @@ export const projects: Project[] = [
     imageUrl: "/images/CalmCulturePuebla.png",
     description: "A rebrand that reflects the calm spirit and culture of Puebla.",
     details: "I focused on simplicity and softness, using photography and minimal design to let the city's story come through clearly.",
-    goal: "Let Puebla’s calm and culture speak for itself.",
+    goal: "Let Puebla's calm and culture speak for itself.",
     role: "Lead Designer",
     tools: ["Photoshop", "Illustrator"],
     challenges: "Blending modern design with traditional roots.",
@@ -91,41 +92,30 @@ export const projects: Project[] = [
   }
 ];
 
+// Design Process Steps
 export const processItems: ProcessItem[] = [
   {
     id: 1,
     title: "Initial Research",
-    description: "Early concept development and hand-drawn sketches exploring different directions.",
-    imageUrl: "https://images.pexels.com/photos/6177617/pexels-photo-6177617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    description: "Starting with deep research and hand-drawn concepts to explore possibilities.",
+    imageUrl: "/images/process/research.jpg"
   },
   {
     id: 2,
-    title: "Type and Design Research",
-    description: "Converting rough ideas into digital wireframes to establish layout and structure.",
-    imageUrl: "https://images.pexels.com/photos/5303549/pexels-photo-5303549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    title: "Type & Design",
+    description: "Developing the visual language through typography and core design elements.",
+    imageUrl: "/images/process/typography.jpg"
   },
   {
     id: 3,
-    title: "Concept Research",
-    description: "Testing different color palettes to find the perfect mood and tone for each project.",
-    imageUrl: "https://images.pexels.com/photos/5801258/pexels-photo-5801258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    title: "Concept Development",
+    description: "Refining ideas and creating cohesive design systems.",
+    imageUrl: "/images/process/concept.jpg"
   },
   {
     id: 4,
-    title: "Digital Designs",
-    description: "Mockups and presentation materials prepared for client review meetings.",
-    imageUrl: "https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  },
-  {
-    id: 5,
-    title: "Final Designs",
-    description: "Final designs delivered in various formats for print and digital use.",
-    imageUrl: "https://images.pexels.com/photos/5801259/pexels-photo-5801259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  },
-  {
-    id: 6,
-    title: "Mockups and Presentation",
-    description: "Incorporating client feedback and making final adjustments before launch.",
-    imageUrl: "https://images.pexels.com/photos/5801260/pexels-photo-5801260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    title: "Digital Implementation",
+    description: "Bringing designs to life in digital form with precise execution.",
+    imageUrl: "/images/process/digital.jpg"
   }
 ];

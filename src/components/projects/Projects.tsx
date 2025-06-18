@@ -1,4 +1,4 @@
-import { projects } from '../data/projectsData';
+import { projects } from '../../data/projectsData';
 import ProjectCard from './ProjectCard';
 import { useNavigate } from 'react-router-dom';
 
